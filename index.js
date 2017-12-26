@@ -45,11 +45,17 @@ function total() {
 }
 
 function removeFromCart(item) {
+  var isItemInCart = false;
   for (var i = 0; i < cart.length; i++) {
     if (item === Object.keys(cart[i])) {
-      delete cart[i];
+      cart.splice(i, 1);
+      isItemInCart = true;
     }
   }
+  if (!isItemInCart) {
+    console.log('That item is not in your cart.');
+  }
+  return cart;
 }
 
 function placeOrder(cardNumber) {
