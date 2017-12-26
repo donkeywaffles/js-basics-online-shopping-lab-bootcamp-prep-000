@@ -17,8 +17,8 @@ function addToCart(item) {
 
 function viewCart() {
   if (cart.length === 1) {
-    console.log(`In your cart, you have ${Object.keys(cart[0])} at $${cart[0][Object.keys(cart[0])]}.`)  
-  }else if(cart.length > 0) {
+    console.log(`In your cart, you have (cart[0])]}.`)  
+  }else if(cart.length > 0) {${Object.keys(cart[0])} at $${cart[0][Object.keys
     var string = '';
     for(var i = 0; i < cart.length - 1; i++) {
       string += ` ${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]},`;
