@@ -30,6 +30,10 @@ function viewCart() {
   }
 }
 
+function getItemAndPrice(index) {
+  return 
+}
+
 function total() {
   // write your code here
 }
