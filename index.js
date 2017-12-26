@@ -17,21 +17,23 @@ function addToCart(item) {
 
 function viewCart() {
   if (cart.length === 1) {
-    console.log(`In your cart, you have (cart[0])]}.`)  
-  }else if(cart.length > 0) {${Object.keys(cart[0])} at $${cart[0][Object.keys
+    console.log (`In your cart, you have ${getItemAndPrice(0)}.`);
+  } else if (cart.length === 2) {
+    console.log (`In your cart, you have ${getItemAndPrice(0)} and ${getItemAndPrice(1)}.`);
+  }else if(cart.length > 0) {
     var string = '';
     for(var i = 0; i < cart.length - 1; i++) {
-      string += ` ${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]},`;
+      string += ` ${getItemAndPrice(i)},`;
     }
-    string += ` and ${Object.keys(cart[cart.length - 1])} at $${cart[cart.length - 1][Object.keys(cart[cart.length - 1])]}.`
+    string += ` and ${getItemAndPrice(cart.length - 1)}.`;
     console.log(`In your cart, you have${string}`);
   } else {
     console.log('Your shopping cart is empty.');
   }
 }
 
-function getItemAndPrice(index) {
-  return 
+function getItemAndPrice(i) {
+  return `${Object.keys(cart[i])} at $${cart[i][Object.keys(cart[i])]}`;
 }
 
 function total() {
